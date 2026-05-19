@@ -1,0 +1,34 @@
+name: MPU6050 motion demo
+version: 1
+steps:
+  - name: Wait boot
+    wait-serial: "MPU6050 inicializado"
+  - name: Still posture
+    set-control:
+      part-id: imu1
+      control: accelZ
+      value: 1
+  - delay: 4s
+  - name: Simulate x acceleration
+    set-control:
+      part-id: imu1
+      control: accelX
+      value: 0.35
+  - delay: 1s
+  - name: Simulate y acceleration
+    set-control:
+      part-id: imu1
+      control: accelY
+      value: -0.25
+  - delay: 1s
+  - name: Back to still
+    set-control:
+      part-id: imu1
+      control: accelX
+      value: 0
+  - name: Back to still Y
+    set-control:
+      part-id: imu1
+      control: accelY
+      value: 0
+  - delay: 4s

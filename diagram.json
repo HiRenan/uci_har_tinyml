@@ -1,0 +1,134 @@
+{
+  "version": 1,
+  "author": "Projeto Final - UCI HAR TinyML",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-s3-devkitc-1",
+      "id": "esp",
+      "top": 0,
+      "left": -30,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-mpu6050",
+      "id": "imu1",
+      "top": -30,
+      "left": 270,
+      "attrs": {
+        "accelX": "0",
+        "accelY": "0",
+        "accelZ": "1",
+        "rotationX": "0",
+        "rotationY": "0",
+        "rotationZ": "0",
+        "temperature": "24"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_run",
+      "top": -120,
+      "left": -180,
+      "attrs": {
+        "color": "green",
+        "label": "INFERENCIA"
+      }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "title",
+      "top": -190,
+      "left": -200,
+      "attrs": {
+        "text": "TinyML HAR: ESP32-S3 + MPU6050 + UCI HAR publico"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "res_led",
+      "top": -70,
+      "left": -120,
+      "attrs": {
+        "value": "220"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "esp:TX",
+      "$serialMonitor:RX",
+      "",
+      []
+    ],
+    [
+      "esp:RX",
+      "$serialMonitor:TX",
+      "",
+      []
+    ],
+    [
+      "imu1:VCC",
+      "esp:3V3",
+      "red",
+      [
+        "h-40",
+        "v50"
+      ]
+    ],
+    [
+      "imu1:GND",
+      "esp:GND.1",
+      "black",
+      [
+        "h-50",
+        "v70"
+      ]
+    ],
+    [
+      "imu1:SDA",
+      "esp:8",
+      "green",
+      [
+        "h-85",
+        "v30"
+      ]
+    ],
+    [
+      "imu1:SCL",
+      "esp:9",
+      "blue",
+      [
+        "h-100",
+        "v50"
+      ]
+    ],
+    [
+      "led_run:A",
+      "esp:4",
+      "green",
+      [
+        "h90",
+        "v20"
+      ]
+    ],
+    [
+      "led_run:C",
+      "res_led:1",
+      "black",
+      [
+        "h30"
+      ]
+    ],
+    [
+      "res_led:2",
+      "esp:GND.2",
+      "black",
+      [
+        "h80",
+        "v60"
+      ]
+    ]
+  ],
+  "dependencies": {}
+}
