@@ -1,0 +1,7 @@
+case=0 expected=WALKING predicted=WALKING logits=[5.37440,3.01608,-5.60289,-6.53319,-1.43891,-2.14628]
+case=1 expected=WALKING_UPSTAIRS predicted=WALKING_UPSTAIRS logits=[0.76156,9.39099,-3.41776,-7.93759,-4.62658,-4.54933]
+case=2 expected=WALKING_DOWNSTAIRS predicted=WALKING_DOWNSTAIRS logits=[-0.33576,2.04448,4.71670,-9.49166,-4.50508,-7.25560]
+case=3 expected=SITTING predicted=SITTING logits=[-3.45013,-5.04204,-2.78779,6.62670,6.31220,-4.00782]
+case=4 expected=STANDING predicted=STANDING logits=[-2.54711,-2.18638,-4.40230,4.02884,7.85594,-3.70742]
+case=5 expected=LAYING predicted=LAYING logits=[-8.07552,-5.28716,-6.12273,-3.13522,-13.55131,9.58333]
+OK: todos os casos de teste do modelo UCI HAR passaram.
