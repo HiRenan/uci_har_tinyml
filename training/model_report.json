@@ -1,0 +1,18 @@
+{
+  "dataset": "UCI Human Activity Recognition Using Smartphones",
+  "source_url": "https://archive.ics.uci.edu/dataset/240/human+activity+recognition+using+smartphones",
+  "samples_train": 7352,
+  "samples_test": 2947,
+  "features_per_window": 43,
+  "float_test_accuracy": 0.8578215134034611,
+  "quantized_test_accuracy": 0.8571428571428571,
+  "classes": [
+    "WALKING",
+    "WALKING_UPSTAIRS",
+    "WALKING_DOWNSTAIRS",
+    "SITTING",
+    "STANDING",
+    "LAYING"
+  ],
+  "model": "MLP 43-32-6, ReLU, pesos int8"
+}
